@@ -1,0 +1,13 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var scoreOfString = function(s) {
+    result = 0
+    for (i = 0; i < s.length -1; i ++) {
+        asciiOne = s.charCodeAt(i);
+        asciiTwo = s.charCodeAt(i + 1);
+        result += Math.abs(asciiOne - asciiTwo);
+    }
+    return result
+};
