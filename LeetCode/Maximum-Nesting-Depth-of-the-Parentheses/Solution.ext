@@ -1,0 +1,16 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxDepth = function(s) {
+    result = 0
+    continueCurl = 0
+
+    for (char of s) {
+        //console.log(char);
+        continueCurl += (char == '(') ? 1 : 0;
+        continueCurl -= (char == ')') ? 1 : 0;
+        result = (result < continueCurl) ? continueCurl : result;
+    }
+    return result;
+};
